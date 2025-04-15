@@ -7,12 +7,12 @@ body {
     padding-top: 100px;
   }
 
-  #relogio {
+  .relogio {
     text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0;
     animation: pulsar 2s infinite;
   }
 
-  #relogio-container {
+  .relogio-container {
     display: inline-block;
     padding: 10px 10px;
     border: 2px solid #0f0;
@@ -28,7 +28,7 @@ body {
     100% { text-shadow: 0 0 10px #0f0; }
   }
   
-  #estrelas {
+  .estrelas {
     position: fixed;
     top: 0;
     left: 0;
@@ -50,11 +50,34 @@ body {
   z-index: -1;
 }
 
-#date {
+.data {
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 25px;
   color: #0f0;
   text-shadow: 0 0 5px #0f0;
   animation: pulsar 2s infinite;
 }
 
+button {
+    padding: 10px 10px;
+    border: 2px solid #0f0;
+    box-shadow: 0 0 20px #0f0;
+    border-radius: 10px;
+    background-color: rgba(0, 255, 0, 0.05);
+    margin-top: 1%;
+    color: #0f0;
+    text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0;
+    animation: pulsar 2s infinite;
+}
+
+button:hover{
+  background-color: rgb(0, 255, 0);
+}
+
+.contador{
+  margin-top: 20px;
+  font-size: 40px;
+  color: #0f0;
+  text-shadow: 0 0 5px #0f0;
+  animation: pulsar 2s infinite;
+}

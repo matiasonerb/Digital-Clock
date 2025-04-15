@@ -4,13 +4,13 @@ function atRelogio() {
     const horas = String(agora.getHours()).padStart(2, '0');
     const minutos = String(agora.getMinutes()).padStart(2, '0');
     const segundos = String(agora.getSeconds()).padStart(2, '0');
-    document.getElementById("relogio").textContent = `${horas}:${minutos}:${segundos}`;
+    document.getElementsByClassName("relogio")[0].textContent = `${horas}:${minutos}:${segundos}`;
   }
   setInterval(atRelogio, 1000);
   atRelogio();
 
 //Estrelas no Fundo
-const canvas = document.getElementById('estrelas');
+const canvas = document.getElementsByClassName('estrelas')[0];
 const ctx = canvas.getContext('2d');
 
 canvas.width = window.innerWidth;
@@ -57,7 +57,7 @@ animaçãoEstrelas();
 
 
 //Data do Relógio
-function updateDate() {
+function atData() {
   const agora = new Date();
   const dias = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
   const meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
@@ -68,7 +68,16 @@ function updateDate() {
   const mes = meses[agora.getMonth()];
   const ano = agora.getFullYear();
 
-  document.getElementById('date').textContent = `${diaSemana}, ${dia} de ${mes} de ${ano}`;
+  document.getElementsByClassName('data')[0].textContent = `${diaSemana}, ${dia} de ${mes} de ${ano}`;
 }
 
-updateDate();
+atData();
+
+
+//Botão
+let cont = 0;
+
+function Clicker() {
+    cont++;
+    document.getElementsByClassName("contador")[0].textContent = cont;
+}
